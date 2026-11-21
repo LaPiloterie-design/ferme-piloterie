@@ -1,0 +1,289 @@
+/* ==========================================================================
+   Ferme de la Piloterie — feuille de style
+   Palette extraite directement du logo :
+   brun bark #5B3A14, vert feuille #4C9458 / #2F7D34,
+   jaune moutarde #C9C400, noir chèvre #1F1B16, crème #FAF6EE
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Caveat:wght@500;600;700&family=Work+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+:root{
+  --brun-bark:#5B3A14;
+  --brun-bark-deep:#3E2710;
+  --brun-clair:#8C5F2C;
+  --vert-feuille:#4C9458;
+  --vert-feuille-deep:#2F7D34;
+  --jaune-moutarde:#C9C400;
+  --jaune-texte:#8A7E00;
+  --noir-chevre:#231E17;
+  --creme-fond:#FAF6EC;
+  --creme-carte:#F1E8D6;
+  --blanc:#FFFDF8;
+  --ombre: 0 10px 30px rgba(59,38,12,0.12);
+  --rayon: 18px;
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--creme-fond);
+  color:var(--noir-chevre);
+  font-family:'Work Sans', sans-serif;
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%; display:block;}
+a{color:inherit;}
+h1,h2,h3,h4{
+  font-family:'Baloo 2', sans-serif;
+  color:var(--brun-bark);
+  margin:0 0 .5em;
+  line-height:1.1;
+}
+h1{font-size:clamp(2.4rem,5vw,3.6rem); font-weight:800;}
+h2{font-size:clamp(1.9rem,3.6vw,2.6rem); font-weight:700;}
+h3{font-size:1.35rem; font-weight:700;}
+p{margin:0 0 1em;}
+.container{max-width:1140px; margin:0 auto; padding:0 24px;}
+.section{padding:88px 0;}
+.section--tight{padding:56px 0;}
+.section--carte{background:var(--creme-carte);}
+.section--brun{background:var(--brun-bark); color:#F4EFE3;}
+.section--brun h2, .section--brun h3{color:var(--jaune-moutarde);}
+
+/* ---------- Signature : le ruban de la ferme ---------- */
+.ruban-wrap{display:flex; justify-content:center; margin:0 0 44px;}
+.ruban-wrap.gauche{justify-content:flex-start;}
+.ruban{
+  position:relative;
+  display:inline-block;
+  background:var(--brun-bark);
+  color:var(--jaune-moutarde);
+  font-family:'Caveat', cursive;
+  font-weight:700;
+  font-size:clamp(1.5rem,2.6vw,2.1rem);
+  padding:14px 46px;
+  clip-path:polygon(0% 0%, 100% 0%, 92% 50%, 100% 100%, 0% 100%, 8% 50%);
+  white-space:nowrap;
+}
+.ruban .eyebrow{
+  display:block;
+  font-family:'Work Sans',sans-serif;
+  font-weight:600;
+  font-size:.62rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:#F4EFE3;
+  opacity:.85;
+}
+
+/* ---------- Header / nav ---------- */
+.entete{
+  position:sticky; top:0; z-index:50;
+  background:rgba(250,246,236,.92);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid rgba(91,58,20,.12);
+}
+.entete .container{
+  display:flex; align-items:center; justify-content:space-between;
+  padding-top:10px; padding-bottom:10px;
+}
+.marque{display:flex; align-items:center; gap:12px; text-decoration:none;}
+.marque img{height:58px; width:auto;}
+.marque-texte{font-family:'Baloo 2'; font-weight:800; color:var(--brun-bark); font-size:1.05rem; line-height:1.15;}
+.marque-texte span{display:block; font-family:'Caveat'; font-weight:600; color:var(--vert-feuille-deep); font-size:1.15rem;}
+
+nav.nav-principale ul{list-style:none; display:flex; gap:6px; margin:0; padding:0;}
+nav.nav-principale a{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:.94rem;
+  text-decoration:none;
+  color:var(--brun-bark-deep);
+  transition:background .2s, color .2s;
+}
+nav.nav-principale a:hover{background:var(--creme-carte);}
+nav.nav-principale a.actif{background:var(--vert-feuille); color:#fff;}
+.btn-devis-nav{
+  background:var(--jaune-moutarde) !important; color:var(--brun-bark-deep) !important;
+}
+
+.burger{display:none; background:none; border:0; cursor:pointer; padding:8px;}
+.burger span{display:block; width:26px; height:3px; margin:5px 0; background:var(--brun-bark);}
+
+/* ---------- Boutons ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:14px 28px;
+  border-radius:999px;
+  font-weight:700;
+  font-family:'Work Sans';
+  text-decoration:none;
+  border:2px solid transparent;
+  cursor:pointer;
+  font-size:1rem;
+  transition:transform .15s ease, box-shadow .15s ease, background .2s;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-principal{background:var(--vert-feuille); color:#fff; box-shadow:var(--ombre);}
+.btn-principal:hover{background:var(--vert-feuille-deep);}
+.btn-secondaire{background:transparent; border-color:var(--brun-bark); color:var(--brun-bark);}
+.btn-secondaire:hover{background:var(--brun-bark); color:#fff;}
+.btn-jaune{background:var(--jaune-moutarde); color:var(--brun-bark-deep); box-shadow:var(--ombre);}
+
+/* ---------- Hero (accueil) ---------- */
+.hero{
+  position:relative;
+  min-height:86vh;
+  display:flex; align-items:flex-end;
+  background:linear-gradient(180deg, rgba(35,26,18,.05) 0%, rgba(35,26,18,.75) 100%), url('../images/troupeau-ciel.jpg') center 30%/cover no-repeat;
+  color:#fff;
+}
+.hero-contenu{padding:64px 0 76px; max-width:720px;}
+.hero .eyebrow-script{
+  font-family:'Caveat'; font-size:1.9rem; color:var(--jaune-moutarde); display:block; margin-bottom:6px;
+}
+.hero h1{color:#fff;}
+.hero p.lead{font-size:1.15rem; color:#F4EFE3; max-width:560px;}
+.hero .actions{display:flex; gap:16px; flex-wrap:wrap; margin-top:28px;}
+
+/* ---------- Cartes / grilles ---------- */
+.grille{display:grid; gap:32px;}
+.grille-2{grid-template-columns:repeat(2,1fr);}
+.grille-3{grid-template-columns:repeat(3,1fr);}
+.grille-4{grid-template-columns:repeat(4,1fr);}
+
+.carte{
+  background:var(--blanc);
+  border-radius:var(--rayon);
+  padding:32px;
+  box-shadow:var(--ombre);
+}
+.carte-photo{
+  background:var(--blanc);
+  border-radius:var(--rayon);
+  overflow:hidden;
+  box-shadow:var(--ombre);
+}
+.carte-photo img{width:100%; height:230px; object-fit:cover;}
+.carte-photo .contenu{padding:22px;}
+
+.badge{
+  display:inline-block; background:var(--jaune-moutarde); color:var(--brun-bark-deep);
+  font-weight:700; font-size:.78rem; letter-spacing:.03em;
+  padding:5px 14px; border-radius:999px; margin-bottom:10px;
+}
+.badge-vert{background:var(--vert-feuille); color:#fff;}
+.badge-ligne{border:2px solid var(--brun-bark); background:transparent; color:var(--brun-bark);}
+
+/* ---------- Feuille décorative (séparateurs organiques) ---------- */
+.separateur{position:relative; height:56px; overflow:hidden;}
+.separateur svg{position:absolute; width:100%; height:100%;}
+
+/* ---------- Bloc image + texte ---------- */
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+.duo img{border-radius:var(--rayon); box-shadow:var(--ombre);}
+.duo.inverse{direction:rtl;}
+.duo.inverse > *{direction:ltr;}
+
+/* ---------- Chiffres clés ---------- */
+.chiffres{display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center;}
+.chiffre .valeur{font-family:'Baloo 2'; font-weight:800; font-size:2.6rem; color:var(--jaune-moutarde);}
+.chiffre .label{font-size:.92rem; color:#F4EFE3; opacity:.9;}
+
+/* ---------- Liste avec puces feuille ---------- */
+ul.liste-feuille{list-style:none; margin:0; padding:0;}
+ul.liste-feuille li{position:relative; padding-left:30px; margin-bottom:12px;}
+ul.liste-feuille li::before{
+  content:"🌿"; position:absolute; left:0; top:1px; font-size:1rem;
+}
+
+/* ---------- Table horaires ---------- */
+.horaires{width:100%; border-collapse:collapse;}
+.horaires td{padding:12px 10px; border-bottom:1px dashed rgba(91,58,20,.25);}
+.horaires td:first-child{font-weight:700; color:var(--brun-bark);}
+
+/* ---------- Formulaire ---------- */
+.formulaire{background:var(--blanc); border-radius:var(--rayon); padding:44px; box-shadow:var(--ombre);}
+.champ{margin-bottom:22px;}
+.champ label{display:block; font-weight:600; margin-bottom:8px; color:var(--brun-bark-deep);}
+.champ input, .champ select, .champ textarea{
+  width:100%; padding:13px 16px; border-radius:12px;
+  border:1.5px solid rgba(91,58,20,.25); background:var(--creme-fond);
+  font-family:inherit; font-size:1rem; color:var(--noir-chevre);
+}
+.champ input:focus, .champ select:focus, .champ textarea:focus{
+  outline:none; border-color:var(--vert-feuille); background:#fff;
+}
+.champ-double{display:grid; grid-template-columns:1fr 1fr; gap:20px;}
+.champ-check{display:flex; align-items:flex-start; gap:10px;}
+.champ-check input{width:auto; margin-top:5px;}
+fieldset{border:0; padding:0; margin:0 0 22px;}
+fieldset legend{font-weight:600; margin-bottom:10px; color:var(--brun-bark-deep); padding:0;}
+.options-animations{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+.options-animations label{
+  display:flex; align-items:center; gap:10px; font-weight:500;
+  background:var(--creme-fond); border:1.5px solid rgba(91,58,20,.2);
+  border-radius:12px; padding:12px 14px; cursor:pointer; font-size:.95rem;
+}
+.options-animations input{width:auto;}
+.note-envoi{font-size:.88rem; color:var(--brun-clair); margin-top:14px;}
+
+/* ---------- Footer ---------- */
+footer.pied{background:var(--brun-bark-deep); color:#EAE2D3; padding:56px 0 28px;}
+footer.pied a{text-decoration:none;}
+footer.pied .grille{grid-template-columns:1.3fr 1fr 1fr;}
+footer.pied h4{color:var(--jaune-moutarde); font-size:1rem;}
+footer.pied ul{list-style:none; padding:0; margin:0;}
+footer.pied li{margin-bottom:8px;}
+footer.pied .marque-pied{display:flex; align-items:center; gap:12px; margin-bottom:14px;}
+footer.pied .marque-pied img{height:52px; filter:brightness(0) invert(1); opacity:.92;}
+.bas-de-page{
+  border-top:1px solid rgba(255,255,255,.12); margin-top:40px; padding-top:20px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  font-size:.85rem; color:#B8AC94;
+}
+
+/* ---------- Bandeau CTA visites ---------- */
+.cta-bandeau{
+  background:var(--vert-feuille-deep); color:#fff; border-radius:24px;
+  padding:48px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap;
+}
+.cta-bandeau h3{color:#fff; margin-bottom:6px;}
+
+/* ---------- Page titre (sous-pages) ---------- */
+.entete-page{padding:64px 0 30px;}
+.fil-ariane{font-size:.85rem; color:var(--brun-clair); margin-bottom:14px;}
+.fil-ariane a{text-decoration:none; color:var(--vert-feuille-deep); font-weight:600;}
+
+/* ---------- Utilitaires ---------- */
+.centre{text-align:center;}
+.max-720{max-width:720px; margin:0 auto;}
+.mt-0{margin-top:0;}
+.mb-0{margin-bottom:0;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:900px){
+  nav.nav-principale{
+    position:fixed; inset:64px 0 0 0; background:var(--creme-fond);
+    transform:translateY(-120%); transition:transform .25s ease;
+    padding:24px; overflow-y:auto; z-index:40;
+  }
+  nav.nav-principale.ouvert{transform:translateY(0);}
+  nav.nav-principale ul{flex-direction:column;}
+  nav.nav-principale a{display:block; text-align:center; padding:16px; font-size:1.1rem;}
+  .burger{display:block;}
+  .grille-2,.grille-3,.grille-4{grid-template-columns:1fr;}
+  .chiffres{grid-template-columns:repeat(2,1fr);}
+  .duo{grid-template-columns:1fr;}
+  .duo.inverse{direction:ltr;}
+  .champ-double, .options-animations{grid-template-columns:1fr;}
+  footer.pied .grille{grid-template-columns:1fr; gap:32px;}
+  .cta-bandeau{flex-direction:column; text-align:center;}
+  .section{padding:56px 0;}
+}

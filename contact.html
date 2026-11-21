@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact & devis — Ferme de la Piloterie</title>
+<meta name="description" content="Contactez la ferme de la Piloterie à Rivarennes ou demandez un devis pour une visite ou une animation.">
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="container">
+    <a href="index.html" class="marque">
+      <img src="images/logo.png" alt="Logo Ferme de la Piloterie">
+      <span class="marque-texte">La Piloterie<span>petite ferme nature</span></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" onclick="document.querySelector('.nav-principale').classList.toggle('ouvert')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">A propos de nous</a></li>
+        <li><a href="elevage-rucher.html">Élevage &amp; rucher</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="visites-animations.html">Visites &amp; animations</a></li>
+        <li><a href="contact.html" class="actif btn-devis-nav">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container entete-page">
+  <p class="fil-ariane"><a href="index.html">Accueil</a> / Contact</p>
+  <div class="ruban-wrap gauche"><div class="ruban"><span class="eyebrow">Nous écrire</span>contact &amp; devis</div></div>
+</div>
+
+<section class="section section--tight" style="padding-top:24px;">
+  <div class="container grille grille-4">
+    <div class="carte centre">
+      <h3>📍 Adresse</h3>
+      <p>La Piloterie<br>36800 Rivarennes</p>
+    </div>
+    <div class="carte centre">
+      <h3>📞 Téléphone</h3>
+      <p><a href="tel:+33695690769">06 95 69 07 69</a></p>
+    </div>
+    <div class="carte centre">
+      <h3>✉️ E-mail</h3>
+      <p><a href="mailto:fromagerielapiloterie@gmail.com">fromagerielapiloterie@gmail.com</a></p>
+    </div>
+    <div class="carte centre">
+      <h3>📘 Facebook</h3>
+      <p><a href="https://www.facebook.com/profile.php?id=100076401940067" target="_blank" rel="noopener">Suivez-nous</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--carte">
+  <div class="container">
+    <h2 class="centre">Une question, une commande ?</h2>
+    <p class="centre max-720" style="margin:0 auto 32px;">Pour une question générale, sur les produits, les horaires ou la boutique, écrivez-nous ici.</p>
+    <form class="formulaire max-720" id="form-contact" action="https://formspree.io/f/maeynvbk" method="POST">
+      <div class="champ-double">
+        <div class="champ">
+          <label for="c-nom">Nom</label>
+          <input type="text" id="c-nom" name="nom" required>
+        </div>
+        <div class="champ">
+          <label for="c-email">E-mail</label>
+          <input type="email" id="c-email" name="_replyto" required>
+        </div>
+      </div>
+      <div class="champ">
+        <label for="c-sujet">Sujet</label>
+        <select id="c-sujet" name="sujet">
+          <option>Question sur les produits</option>
+          <option>Horaires / vente à la ferme</option>
+          <option>Boutique en ligne</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="c-message">Message</label>
+        <textarea id="c-message" name="message" rows="5" required></textarea>
+      </div>
+      <input type="hidden" name="_subject" value="Nouveau message depuis le site — Ferme de la Piloterie">
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit" class="btn btn-principal">Envoyer le message</button>
+      <p class="note-envoi" id="note-contact">Vous recevrez une réponse par e-mail dans les meilleurs délais.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="devis">
+  <div class="container">
+    <div class="ruban-wrap" style="justify-content:center;"><div class="ruban"><span class="eyebrow">Visites &amp; animations</span>demande de devis</div></div>
+    <p class="centre max-720" style="margin:0 auto 8px;">Vous souhaitez organiser une visite de groupe, une animation scolaire, un anniversaire ou tout autre événement à la ferme ? Remplissez ce formulaire, nous revenons vers vous avec une proposition adaptée.</p>
+    <p class="centre max-720" style="margin:0 auto 32px; font-weight:600; color:var(--vert-feuille-deep);">♿ La ferme est accessible aux personnes à mobilité réduite.</p>
+
+    <form class="formulaire max-720" id="form-devis" action="https://formspree.io/f/maeynvbk" method="POST">
+      <div class="champ-double">
+        <div class="champ">
+          <label for="d-nom">Nom &amp; prénom</label>
+          <input type="text" id="d-nom" name="nom" required>
+        </div>
+        <div class="champ">
+          <label for="d-structure">Structure (école, association...)</label>
+          <input type="text" id="d-structure" name="structure" placeholder="Facultatif">
+        </div>
+      </div>
+
+      <div class="champ-double">
+        <div class="champ">
+          <label for="d-email">E-mail</label>
+          <input type="email" id="d-email" name="email" required>
+        </div>
+        <div class="champ">
+          <label for="d-telephone">Téléphone</label>
+          <input type="tel" id="d-telephone" name="telephone" required>
+        </div>
+      </div>
+
+      <div class="champ-double">
+        <div class="champ">
+          <label for="d-date">Date souhaitée</label>
+          <input type="date" id="d-date" name="date">
+        </div>
+        <div class="champ">
+          <label for="d-personnes">Nombre de participants</label>
+          <input type="number" id="d-personnes" name="personnes" min="1">
+        </div>
+      </div>
+
+      <div class="champ">
+        <label for="d-public">Âge des participants</label>
+        <select id="d-public" name="public_concerne">
+          <option value="">Sélectionnez le public concerné...</option>
+          <option value="Jeune public (enfants)">Jeune public (enfants)</option>
+          <option value="Seniors / personnes à besoin spécifique">Adultes, seniors ou personnes à besoin spécifique</option>
+          <option value="Groupe mixte (enfants et adultes)">Groupe mixte (enfants et adultes)</option>
+        </select>
+      </div>
+      <div class="champ">
+        <label for="d-age-precision">Précision sur l'âge <span style="font-weight:400;">(facultatif)</span></label>
+        <input type="text" id="d-age-precision" name="age_precision" placeholder="Ex. : classe de CE2, 7-8 ans">
+      </div>
+
+      <div id="alerte-grand-groupe" class="champ" style="display:none; background:var(--creme-carte); border-radius:12px; padding:16px 18px; border:1.5px solid var(--vert-feuille);">
+        <p style="margin:0; font-weight:600; color:var(--vert-feuille-deep);">🐝 Pour les grands groupes (plus de 20 personnes), nous recommandons particulièrement la visite / animation autour de la ruche.</p>
+      </div>
+
+      <fieldset id="fieldset-junior" style="display:none;">
+        <legend>Animations « jeune public » (accueil ~2h15, 13€/enfant)</legend>
+        <div class="options-animations">
+          <label><input type="checkbox" name="animation_junior" value="Artistes en herbe (5-7 ans)"> Artistes en herbe <span style="opacity:.7; font-weight:400;">(5-7 ans)</span></label>
+          <label><input type="checkbox" name="animation_junior" value="Les p'tits chefs (8-12 ans)"> Les p'tits chefs <span style="opacity:.7; font-weight:400;">(8-12 ans)</span></label>
+          <label><input type="checkbox" name="animation_junior" value="Au cœur de la ruche (8-12 ans)"> Au cœur de la ruche <span style="opacity:.7; font-weight:400;">(8-12 ans)</span></label>
+        </div>
+      </fieldset>
+
+      <fieldset id="fieldset-senior" style="display:none;">
+        <legend>Animations « seniors / personnes à besoin spécifique »</legend>
+        <div class="options-animations">
+          <label><input type="checkbox" name="animation_senior" value="Les Gourmets"> Les Gourmets</label>
+          <label><input type="checkbox" name="animation_senior" value="Pain d'épices"> Pain d'épices</label>
+          <label><input type="checkbox" name="animation_senior" value="Fabrication de bougies"> Fabrication de bougies</label>
+          <label><input type="checkbox" name="animation_senior" value="Autour de la ruche"> Autour de la ruche</label>
+        </div>
+        <p style="font-size:.85rem; color:var(--brun-clair); margin:10px 0 0;">Détail de ces animations à venir prochainement.</p>
+      </fieldset>
+
+      <div class="champ">
+        <label for="d-structure2">Type de visite</label>
+        <select id="d-structure2" name="type_visite">
+          <option value="Visite de groupe / famille">Visite de groupe / famille</option>
+          <option value="Animation de groupe">Animation de groupe</option>
+          <option value="Animation scolaire">Animation scolaire</option>
+          <option value="Anniversaire">Anniversaire</option>
+          <option value="Autre">Autre</option>
+        </select>
+      </div>
+
+      <div class="champ">
+        <label for="d-message">Votre projet en quelques mots</label>
+        <textarea id="d-message" name="message" rows="5" placeholder="Décrivez votre demande : occasion, attentes particulières, contraintes de date..."></textarea>
+      </div>
+
+      <div class="champ champ-check">
+        <input type="checkbox" id="d-rgpd" required>
+        <label for="d-rgpd" style="font-weight:400;">J'accepte que ces informations soient utilisées par la ferme de la Piloterie pour répondre à ma demande de devis.</label>
+      </div>
+
+      <input type="hidden" name="_subject" value="Nouvelle demande de devis — Visite / animation">
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit" class="btn btn-jaune">Envoyer ma demande de devis</button>
+      <p class="note-envoi" id="note-devis">Vous recevrez une réponse par e-mail dans les meilleurs délais.</p>
+    </form>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="container grille">
+    <div>
+      <div class="marque-pied"><img src="images/logo.png" alt="Logo Ferme de la Piloterie"></div>
+      <p style="max-width:280px; color:#C9BFA8;">Élevage de chèvres poitevines, rucher et fabrication fermière à Rivarennes, au cœur du Parc naturel régional de la Brenne.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="a-propos.html">A propos de nous</a></li>
+        <li><a href="elevage-rucher.html">Élevage &amp; rucher</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="visites-animations.html">Visites &amp; animations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>La Piloterie, 36800 Rivarennes</li>
+        <li>06 95 69 07 69</li>
+        <li>fromagerielapiloterie@gmail.com</li>
+        <li><a href="https://www.facebook.com/profile.php?id=100076401940067" target="_blank" rel="noopener">📘 Suivez-nous sur Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container bas-de-page">
+    <span>© 2026 Ferme de la Piloterie</span>
+    <span>Site fait à la main, comme le fromage 🐐</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

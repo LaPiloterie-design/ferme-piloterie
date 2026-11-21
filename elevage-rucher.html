@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Élevage & rucher — Ferme de la Piloterie</title>
+<meta name="description" content="Découvrez l'élevage de chèvres poitevines en plein air et le rucher de la ferme de la Piloterie à Rivarennes.">
+<link rel="icon" href="images/logo.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="entete">
+  <div class="container">
+    <a href="index.html" class="marque">
+      <img src="images/logo.png" alt="Logo Ferme de la Piloterie">
+      <span class="marque-texte">La Piloterie<span>petite ferme nature</span></span>
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" onclick="document.querySelector('.nav-principale').classList.toggle('ouvert')">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav-principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="a-propos.html">A propos de nous</a></li>
+        <li><a href="elevage-rucher.html" class="actif">Élevage &amp; rucher</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="visites-animations.html">Visites &amp; animations</a></li>
+        <li><a href="contact.html" class="btn-devis-nav">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container entete-page">
+  <p class="fil-ariane"><a href="index.html">Accueil</a> / Élevage &amp; rucher</p>
+  <div class="ruban-wrap gauche"><div class="ruban"><span class="eyebrow">Au pré et dans les ruches</span>l'élevage &amp; le rucher</div></div>
+</div>
+
+<section class="section section--tight" style="padding-top:0;">
+  <div class="container">
+    <div class="chiffres" style="background:var(--brun-bark); border-radius:24px; padding:40px 24px; margin-bottom:56px;">
+      <div class="chiffre"><div class="valeur">~50</div><div class="label">chèvres poitevines</div></div>
+      <div class="chiffre"><div class="valeur">100%</div><div class="label">plein air</div></div>
+      <div class="chiffre"><div class="valeur">Bio</div><div class="label">agriculture biologique</div></div>
+      <div class="chiffre"><div class="valeur">🐝</div><div class="label">un rucher en prairie</div></div>
+    </div>
+
+    <div class="duo">
+      <img src="images/chevre-arbre.jpg" alt="Chèvre poitevine broutant les jeunes pousses d'un arbre">
+      <div>
+        <h2>Un troupeau de chèvres poitevines</h2>
+        <p>À la Piloterie, une cinquantaine de chèvres de race poitevine — une race caprine ancienne et aujourd'hui menacée — vivent en plein air toute l'année, au fil des prairies et des saisons.</p>
+        <ul class="liste-feuille">
+          <li>Élevage conduit en agriculture biologique</li>
+          <li>Pâturage libre, à l'ombre des grands arbres du domaine</li>
+          <li>Une race rustique, reconnaissable à sa robe pie noire et blanche</li>
+          <li>Une contribution à la sauvegarde d'une race menacée</li>
+        </ul>
+        <p style="margin-top:20px;">Nous sommes adhérents de l'<a href="https://www.chevre-poitevine.org/" target="_blank" rel="noopener" style="color:var(--vert-feuille-deep); font-weight:600;">Association pour la Défense et le Développement de la Chèvre Poitevine (ADDCP)</a>, qui œuvre à la sauvegarde de cette race.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--carte">
+  <div class="container duo inverse">
+    <img src="images/chevreau-herbe.jpg" alt="Chevreau couché dans l'herbe à la ferme de la Piloterie">
+    <div>
+      <h2>La traite et la fromagerie</h2>
+      <p>Le lait des chèvres est transformé sur place, dans notre petit atelier de fromagerie, selon des méthodes fermières et artisanales, en fromages au lait cru.</p>
+      <p>Nous respectons les saisons : la chèvre est un animal saisonné, les mises bas ont lieu au printemps. Nous avons donc du lait, et fabriquons nos fromages, de mars à fin octobre.</p>
+      <p>La traite est réalisée deux fois par jour de mars à juillet, puis une fois par jour d'août à octobre. La chèvre poitevine a la particularité de produire un lait étonnamment doux.</p>
+      <a href="produits.html" class="btn btn-principal">Voir les fromages</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="ruban-wrap"><div class="ruban"><span class="eyebrow">Dans les prairies</span>le rucher de la ferme</div></div>
+    <div class="duo">
+      <div>
+        <p>Quelques ruches sont installées dans les prairies de la ferme. Le miel et les produits de la ruche qui en sont issus sont récoltés et conditionnés directement sur place par Stéphane.</p>
+        <p><em>[À compléter : nombre de ruches, variétés de fleurs butinées, période de récolte, type de miel proposé (toutes fleurs, miellat...).]</em></p>
+        <a href="produits.html#miel" class="btn btn-secondaire">Découvrir le miel &amp; les produits de la ruche</a>
+      </div>
+      <img src="images/stephane-cadre-miel.jpg" alt="Stéphane, apiculteur, présentant un cadre de ruche">
+    </div>
+
+    <div class="duo inverse" style="margin-top:56px;">
+      <video controls preload="none" poster="images/video-stephane-ruches-poster.jpg" style="width:100%; border-radius:var(--rayon); box-shadow:var(--ombre);">
+        <source src="images/video-stephane-ruches.mp4" type="video/mp4">
+        Votre navigateur ne prend pas en charge la lecture de cette vidéo.
+      </video>
+      <div>
+        <h3>Stéphane, au travail sur les ruches</h3>
+        <p>De la visite des cadres à l'extraction, découvrez en images le travail de Stéphane auprès des abeilles de la ferme.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="ruban-wrap"><div class="ruban"><span class="eyebrow">Instantanés</span>le troupeau en images</div></div>
+    <div class="grille grille-4">
+      <img src="images/chevre-gros-plan.jpg" alt="Portrait rapproché d'une chèvre poitevine" style="border-radius:var(--rayon); box-shadow:var(--ombre); height:220px; width:100%; object-fit:cover;">
+      <img src="images/chevreau-sur-mere.jpg" alt="Chevreau grimpé sur sa mère à la bergerie" style="border-radius:var(--rayon); box-shadow:var(--ombre); height:220px; width:100%; object-fit:cover;">
+      <img src="images/chevreau-foin.jpg" alt="Chevreau curieux passant la tête entre les planches" style="border-radius:var(--rayon); box-shadow:var(--ombre); height:220px; width:100%; object-fit:cover;">
+      <img src="images/chevreau-longue-herbe.jpg" alt="Chevreau dans les hautes herbes de la prairie" style="border-radius:var(--rayon); box-shadow:var(--ombre); height:220px; width:100%; object-fit:cover;">
+    </div>
+  </div>
+</section>
+
+<section class="section section--brun">
+  <div class="container cta-bandeau" style="background:transparent; padding:0;">
+    <div>
+      <h3>Envie de voir le troupeau de près ?</h3>
+      <p style="margin:0; color:#F4EFE3;">Des visites de l'exploitation sont possibles sur rendez-vous.</p>
+    </div>
+    <a href="visites-animations.html" class="btn btn-jaune">Voir les visites &amp; animations</a>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="container grille">
+    <div>
+      <div class="marque-pied"><img src="images/logo.png" alt="Logo Ferme de la Piloterie"></div>
+      <p style="max-width:280px; color:#C9BFA8;">Élevage de chèvres poitevines, rucher et fabrication fermière à Rivarennes, au cœur du Parc naturel régional de la Brenne.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="a-propos.html">A propos de nous</a></li>
+        <li><a href="elevage-rucher.html">Élevage &amp; rucher</a></li>
+        <li><a href="produits.html">Produits</a></li>
+        <li><a href="visites-animations.html">Visites &amp; animations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>La Piloterie, 36800 Rivarennes</li>
+        <li>06 95 69 07 69</li>
+        <li>fromagerielapiloterie@gmail.com</li>
+        <li><a href="https://www.facebook.com/profile.php?id=100076401940067" target="_blank" rel="noopener">📘 Suivez-nous sur Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container bas-de-page">
+    <span>© 2026 Ferme de la Piloterie</span>
+    <span>Site fait à la main, comme le fromage 🐐</span>
+  </div>
+</footer>
+
+</body>
+</html>
